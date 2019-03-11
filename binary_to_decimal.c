@@ -7,12 +7,10 @@ main(){
 	scanf("%d", &binary);
 	
 	do{
-		remainder=binary%10;
-		if(remainder==0||remainder==1){
+		if(binary%10==1||binary%10==0){
+			decimal+= (binary%10)*pow(2,i);
 			binary/=10;
-			remainder*=pow(2,i);
-			decimal+=remainder;
-			i++;	
+			i++;
 		}
 		else{
 			printf("Error!!!");
